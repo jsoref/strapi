@@ -2,7 +2,7 @@ import { getType, getOtherInfos } from './content-manager/utils/getAttributeInfo
 
 // Contexts
 export { default as AppInfosContext } from './contexts/AppInfosContext';
-export { default as AutoReloadOverlayBockerContext } from './contexts/AutoReloadOverlayBockerContext';
+export { default as AutoReloadOverlayBlockerContext } from './contexts/AutoReloadOverlayBlockerContext';
 export { default as NotificationsContext } from './contexts/NotificationsContext';
 export { default as OverlayBlockerContext } from './contexts/OverlayBlockerContext';
 
