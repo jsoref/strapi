@@ -28,7 +28,7 @@ const EditPage = () => {
   const {
     params: { id },
   } = useRouteMatch('/settings/roles/:id');
-  const [isSubmitting, setIsSubmiting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const permissionsRef = useRef();
   const { lockApp, unlockApp } = useOverlayBlocker();
   const { trackUsage } = useTracking();
@@ -44,7 +44,7 @@ const EditPage = () => {
   const handleEditRoleSubmit = async data => {
     try {
       lockApp();
-      setIsSubmiting(true);
+      setIsSubmitting(true);
 
       const { permissionsToSend, didUpdateConditions } = permissionsRef.current.getPermissions();
 
@@ -76,7 +76,7 @@ const EditPage = () => {
     } catch (err) {
       console.error(err.response);
 
-      const errorMessage = get(err, 'response.payload.message', 'An error occured');
+      const errorMessage = get(err, 'response.payload.message', 'An error occurred');
       const message = get(err, 'response.payload.data.permissions[0]', errorMessage);
 
       toggleNotification({
@@ -84,7 +84,7 @@ const EditPage = () => {
         message,
       });
     } finally {
-      setIsSubmiting(false);
+      setIsSubmitting(false);
       unlockApp();
     }
   };

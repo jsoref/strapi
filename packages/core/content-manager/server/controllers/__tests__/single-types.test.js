@@ -4,7 +4,7 @@ const createContext = require('../../../../../../test/helpers/create-context');
 const singleTypes = require('../single-types');
 
 describe('Single Types', () => {
-  test('Successfull find', async () => {
+  test('Successful find', async () => {
     const state = {
       userAbility: {
         can: jest.fn(),
@@ -40,8 +40,8 @@ describe('Single Types', () => {
               find() {
                 return Promise.resolve();
               },
-              assocCreatorRoles(enitty) {
-                return enitty;
+              assocCreatorRoles(entity) {
+                return entity;
               },
             },
             'permission-checker': {
@@ -75,7 +75,7 @@ describe('Single Types', () => {
     expect(notFound).toHaveBeenCalled();
   });
 
-  test('Successfull create', async () => {
+  test('Successful create', async () => {
     const modelUid = 'test-uid';
 
     const state = {
@@ -132,8 +132,8 @@ describe('Single Types', () => {
               find() {
                 return Promise.resolve();
               },
-              assocCreatorRoles(enitty) {
-                return enitty;
+              assocCreatorRoles(entity) {
+                return entity;
               },
               create: createFn,
             },
@@ -184,7 +184,7 @@ describe('Single Types', () => {
     });
   });
 
-  test('Successfull delete', async () => {
+  test('Successful delete', async () => {
     const modelUid = 'test-uid';
 
     const entity = {
@@ -243,8 +243,8 @@ describe('Single Types', () => {
               find() {
                 return Promise.resolve(entity);
               },
-              assocCreatorRoles(enitty) {
-                return enitty;
+              assocCreatorRoles(entity) {
+                return entity;
               },
               delete: deleteFn,
             },
@@ -278,7 +278,7 @@ describe('Single Types', () => {
     expect(permissionChecker.sanitizeOutput).toHaveBeenCalled();
   });
 
-  test('Successfull publish', async () => {
+  test('Successful publish', async () => {
     const modelUid = 'test-uid';
 
     const entity = {
@@ -337,8 +337,8 @@ describe('Single Types', () => {
               find() {
                 return Promise.resolve(entity);
               },
-              assocCreatorRoles(enitty) {
-                return enitty;
+              assocCreatorRoles(entity) {
+                return entity;
               },
               publish: publishFn,
             },
@@ -372,7 +372,7 @@ describe('Single Types', () => {
     expect(permissionChecker.sanitizeOutput).toHaveBeenCalled();
   });
 
-  test('Successfull unpublish', async () => {
+  test('Successful unpublish', async () => {
     const modelUid = 'test-uid';
 
     const entity = {
@@ -431,8 +431,8 @@ describe('Single Types', () => {
               find() {
                 return Promise.resolve(entity);
               },
-              assocCreatorRoles(enitty) {
-                return enitty;
+              assocCreatorRoles(entity) {
+                return entity;
               },
               unpublish: unpublishFn,
             },

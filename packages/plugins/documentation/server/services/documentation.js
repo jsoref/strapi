@@ -5,7 +5,7 @@ const fs = require('fs-extra');
 const _ = require('lodash');
 const { getAbsoluteServerUrl } = require('@strapi/utils');
 
-const { builApiEndpointPath } = require('../utils/builders');
+const { buildApiEndpointPath } = require('../utils/builders');
 const defaultConfig = require('../config/default-config');
 
 module.exports = ({ strapi }) => {
@@ -129,7 +129,7 @@ module.exports = ({ strapi }) => {
         const apiDirPath = path.join(this.getApiDocumentationPath(api), version);
 
         const apiDocPath = path.join(apiDirPath, `${apiName}.json`);
-        const apiPathsObject = builApiEndpointPath(api);
+        const apiPathsObject = buildApiEndpointPath(api);
 
         if (!apiPathsObject) {
           continue;

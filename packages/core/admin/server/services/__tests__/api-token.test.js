@@ -55,7 +55,7 @@ describe('API Token', () => {
   });
 
   describe('createSaltIfNotDefined', () => {
-    test('It does nothing if the salt is alread defined', () => {
+    test('It does nothing if the salt is already defined', () => {
       const mockedAppendFile = jest.fn();
       const mockedConfigSet = jest.fn();
 
@@ -307,11 +307,11 @@ describe('API Token', () => {
         },
       };
 
-      const res = await apiTokenService.getByName('unexistant-name');
+      const res = await apiTokenService.getByName('nonexistent-name');
 
       expect(findOne).toHaveBeenCalledWith({
         select: ['id', 'name', 'description', 'type', 'createdAt'],
-        where: { name: 'unexistant-name' },
+        where: { name: 'nonexistent-name' },
       });
       expect(res).toEqual(null);
     });

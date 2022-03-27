@@ -190,7 +190,7 @@ export const PreviewBox = ({
         </ActionRow>
 
         <Wrapper>
-          {/* This one is for editting an asset */}
+          {/* This one is for editing an asset */}
           {isLoading && (
             <UploadProgressWrapper>
               <UploadProgress error={error} onCancel={cancel} progress={progress} />

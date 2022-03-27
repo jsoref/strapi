@@ -31,7 +31,7 @@ export const SettingsPage = () => {
   const toggleNotification = useNotification();
   useFocusWhenNavigate();
 
-  const [{ initialData, isLoading, isSubmiting, modifiedData }, dispatch] = useReducer(
+  const [{ initialData, isLoading, isSubmitting, modifiedData }, dispatch] = useReducer(
     reducer,
     initialState,
     init
@@ -117,7 +117,7 @@ export const SettingsPage = () => {
       <Helmet
         title={formatMessage({
           id: getTrad('page.title'),
-          defaultMessage: 'Settings - Media Libray',
+          defaultMessage: 'Settings - Media Library',
         })}
       />
       <form onSubmit={handleSubmit}>
@@ -130,7 +130,7 @@ export const SettingsPage = () => {
             <Button
               disabled={isSaveButtonDisabled}
               data-testid="save-button"
-              loading={isSubmiting}
+              loading={isSubmitting}
               type="submit"
               startIcon={<Check />}
               size="L"

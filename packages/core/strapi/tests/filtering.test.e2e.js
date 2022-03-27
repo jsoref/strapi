@@ -629,7 +629,7 @@ describe('Filtering API', () => {
     });
 
     describe('Filter greater than or equal', () => {
-      test('Should work correclty on equal values', async () => {
+      test('Should work correctly on equal values', async () => {
         const res = await rq({
           method: 'GET',
           url: '/products',
@@ -797,7 +797,7 @@ describe('Filtering API', () => {
     });
 
     describe('Filter less than or equal', () => {
-      test('Should work correclty on equal values', async () => {
+      test('Should work correctly on equal values', async () => {
         const res = await rq({
           method: 'GET',
           url: '/products',
@@ -981,7 +981,7 @@ describe('Filtering API', () => {
     });
   });
 
-  describe('Implict or', () => {
+  describe('Implicit or', () => {
     test('Filter equals', async () => {
       const res = await rq({
         method: 'GET',
@@ -1133,7 +1133,7 @@ describe('Filtering API', () => {
     });
   });
 
-  describe('Complexe filtering', () => {
+  describe('Complex filtering', () => {
     test('Greater than and less than at the same time', async () => {
       let res = await rq({
         method: 'GET',

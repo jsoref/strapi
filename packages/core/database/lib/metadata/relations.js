@@ -158,10 +158,10 @@ const createManyToMany = (attributeName, attribute, meta, metadata) => {
  * if with join table then
  *   create join table
  * else
- *  create join columnsa
+ *  create join columns
  *
- * if bidirectionnal
- *  set info in the traget
+ * if bidirectional
+ *  set info in the target
  *
  *
  * @param {string} attributeName

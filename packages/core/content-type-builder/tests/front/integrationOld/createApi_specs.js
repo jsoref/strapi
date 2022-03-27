@@ -90,7 +90,7 @@ describe('Test CTB', () => {
         .click()
         .wait(animDelay);
 
-      // Check that we don't have a build error from reacstrap
+      // Check that we don't have a build error from reactstrap
       cy.checkModalOpening().should('be.visible');
 
       // Ensure the modal is opened to get #attrCardstring
@@ -212,13 +212,13 @@ describe('Test CTB', () => {
         .should('be.visible')
         .get('input[name="name"]')
         .type('{selectall}')
-        .type('produit')
+        .type('product')
         .submitForm()
         .wait('@updateProductModel')
         .wait(frontLoadingDelay);
 
       // Check that we can still go to the create page
-      cy.get('a[href="/admin/plugins/content-manager/produit?source=content-manager"')
+      cy.get('a[href="/admin/plugins/content-manager/product?source=content-manager"')
         .click()
         .wait(frontLoadingDelay)
         .get('button[label="content-manager.containers.List.addAnEntry"')
@@ -242,7 +242,7 @@ describe('Test CTB', () => {
 
   after(() => {
     cy.deleteApi('tag', jwt)
-      .deleteApi('produit', jwt)
+      .deleteApi('product', jwt)
       .deleteUser(userId, jwt);
   });
 });

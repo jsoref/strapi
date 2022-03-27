@@ -20,7 +20,7 @@ const DEFAULT_THEME = 'blackboard';
 
 const loadCss = async () => {
   await import(
-    /* webpackChunkName: "codemirror-javacript" */ 'codemirror/mode/javascript/javascript'
+    /* webpackChunkName: "codemirror-javascript" */ 'codemirror/mode/javascript/javascript'
   );
   await import(/* webpackChunkName: "codemirror-addon-lint" */ 'codemirror/addon/lint/lint');
   await import(
@@ -132,7 +132,7 @@ class InputJSON extends React.Component {
       },
     });
 
-    // Remove higlight error
+    // Remove highlight error
     if (this.state.markedText) {
       this.state.markedText.clear();
       this.setState({ markedText: null, error: null });

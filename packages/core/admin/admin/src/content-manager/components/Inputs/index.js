@@ -86,7 +86,7 @@ function Inputs({
   }, [type]);
 
   const inputValue = useMemo(() => {
-    // Fix for input file multipe
+    // Fix for input file multiple
     if (type === 'media' && !value) {
       return [];
     }
