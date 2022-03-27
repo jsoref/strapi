@@ -629,7 +629,7 @@ describe('Filtering API', () => {
     });
 
     describe('Filter greater than or equal', () => {
-      test('Should work correclty on equal values', async () => {
+      test('Should work correctly on equal values', async () => {
         const res = await rq({
           method: 'GET',
           url: '/products',
@@ -797,7 +797,7 @@ describe('Filtering API', () => {
     });
 
     describe('Filter less than or equal', () => {
-      test('Should work correclty on equal values', async () => {
+      test('Should work correctly on equal values', async () => {
         const res = await rq({
           method: 'GET',
           url: '/products',
