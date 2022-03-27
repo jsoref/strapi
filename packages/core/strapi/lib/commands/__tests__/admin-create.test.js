@@ -40,7 +40,7 @@ describe('admin:create command', () => {
 
   test('createAdminCommand accepts direct input', async () => {
     const email = 'email@email.fr';
-    const password = 'testPasword1234';
+    const password = 'testPassword1234';
     const firstname = 'John';
     const lastname = 'Doe';
 
@@ -91,7 +91,7 @@ describe('admin:create command', () => {
     test('Stops if not confirmed', async () => {
       process.stdin.isTTY = true;
       const email = 'email@email.fr';
-      const password = 'testPasword1234';
+      const password = 'testPassword1234';
       const firstname = 'John';
       const lastname = 'Doe';
 
@@ -150,7 +150,7 @@ describe('admin:create command', () => {
 
     test('Calls the create method with user input', async () => {
       const email = 'email@email.fr';
-      const password = 'testPasword1234';
+      const password = 'testPassword1234';
       const firstname = 'John';
       const lastname = 'Doe';
 
@@ -213,7 +213,7 @@ describe('admin:create command', () => {
 
     test('Sets registration token to null if password is passed', async () => {
       const email = 'email@email.fr';
-      const password = 'testPasword1234';
+      const password = 'testPassword1234';
       const firstname = 'John';
       const lastname = 'Doe';
 
@@ -243,7 +243,7 @@ describe('admin:create command', () => {
       exists.mockImplementation(() => Promise.resolve(true));
 
       const email = 'email@email.fr';
-      const password = 'testPasword1234';
+      const password = 'testPassword1234';
       const firstname = 'John';
       const lastname = 'Doe';
 
@@ -280,7 +280,7 @@ describe('admin:create command', () => {
   describe('Validation', () => {
     test('Handles invalid email', async () => {
       const email = 'email.@email.fr';
-      const password = 'testPasword1234';
+      const password = 'testPassword1234';
       const firstname = 'John';
       const lastname = 'Doe';
 
