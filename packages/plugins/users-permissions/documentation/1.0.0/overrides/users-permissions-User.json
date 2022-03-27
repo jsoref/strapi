@@ -204,7 +204,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successfull redirection after approving a provider",
+            "description": "Successful redirection after approving a provider",
             "content": {
               "application/json": {
                 "schema": {
