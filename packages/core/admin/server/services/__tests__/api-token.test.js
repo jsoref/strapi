@@ -55,7 +55,7 @@ describe('API Token', () => {
   });
 
   describe('createSaltIfNotDefined', () => {
-    test('It does nothing if the salt is alread defined', () => {
+    test('It does nothing if the salt is already defined', () => {
       const mockedAppendFile = jest.fn();
       const mockedConfigSet = jest.fn();
 
