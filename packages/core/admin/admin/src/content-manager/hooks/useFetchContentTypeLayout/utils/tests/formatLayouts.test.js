@@ -341,7 +341,7 @@ describe('Content Manager | hooks | useFetchContentTypeLayout | utils ', () => {
   });
 
   describe('formatLayoutWithMetas', () => {
-    it('should return a layout with the metadas for each input', () => {
+    it('should return a layout with the metadata for each input', () => {
       const data = {
         attributes: {
           full_name: {
