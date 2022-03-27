@@ -317,7 +317,7 @@ async function watchFiles(dir) {
       try {
         fs.removeSync(path.join(destFolder, targetPath));
       } catch (err) {
-        console.log('An error occured while deleting the file', err);
+        console.log('An error occurred while deleting the file', err);
       }
     } else {
       // In any other case just copy the file into the .cache/admin/src folder
