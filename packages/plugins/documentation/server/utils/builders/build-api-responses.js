@@ -34,7 +34,7 @@ const getMeta = isListOfEntities => {
  *
  * @param {object} attributes - The attributes found on a contentType
  * @param {object} route - The current route
- * @param {boolean} isListOfEntities - Checks for a list of entitities
+ * @param {boolean} isListOfEntities - Checks for a list of entities
  *
  * @returns The Swagger responses
  */
