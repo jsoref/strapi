@@ -131,7 +131,7 @@ module.exports = async ({ provider, access_token, callback, query, providers }) 
             });
           }
 
-          // Get the email with Github's user/emails API
+          // Get the email with GitHub's user/emails API
           github
             .query()
             .get('user/emails')
